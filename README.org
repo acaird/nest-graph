@@ -1,0 +1,31 @@
+#+OPTIONS: ':t H:3 ^:{} author:t date:t email:t num:t toc:t title:t
+#+TITLE: Nest Thermostat Graph
+#+AUTHOR: Andrew Caird
+#+EMAIL: acaird@gmail.com
+
+* Introduction
+
+  This is a project to gather temperature information from the Nest
+  API for thermostats and [[https://nest.com/thermostats/nest-temperature-sensor/overview/][temperature sensors]] and store it for later
+  analysis.  The parts of this are:
+   - gathering the data via Nest's API
+   - storing the data
+   - plotting the data
+
+  My motivation for this is to see if I need more heating capacity in
+  a room where I have a Nest temperature sensor that is controlled by
+  a thermostat in another room - if the temperature between the two
+  rooms is greatly imbalanced, I either need more heat in one of the
+  rooms or for that heat to be on its own thermostat.
+  
+* Resources:
+  - At least one [[https://nest.com/connected-home/energy/the-technology-behind-the-nest-thermostat-e-s-display][Nest Thermostat]]
+  - At least one [[https://nest.com/thermostats/nest-temperature-sensor/overview/][Nest Temperature Sensors]]
+  - The [[https://developers.nest.com/][Nest Developer Guide]]
+  - [[https://www.python.org/][Python]]
+
+
+
+
+  
+  
