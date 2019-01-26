@@ -22,6 +22,7 @@
   - At least one [[https://nest.com/connected-home/energy/the-technology-behind-the-nest-thermostat-e-s-display][Nest Thermostat]]
   - At least one [[https://nest.com/thermostats/nest-temperature-sensor/overview/][Nest Temperature Sensors]]
   - The [[https://developers.nest.com/][Nest Developer Guide]]
+  - The [[https://codelabs.developers.google.com/codelabs/wwn-api-quickstart/#4][Codelabs "Works with Nest" guide]]
   - [[https://www.python.org/][Python]]
 
 
