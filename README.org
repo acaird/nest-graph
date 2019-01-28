@@ -26,7 +26,9 @@
   - The [[https://developers.nest.com/reference/api-thermostat][Nest Thermostat API Guide]]
   - Nest's API advice on [[https://developers.nest.com/guides/api/how-to-handle-redirects][Handling Redirects]]
   - [[https://www.python.org/][Python]]
-  - [[https://docs.docker.com/samples/library/influxdb/][InfluxDB]] docker image documentation, [[https://github.com/influxdata/influxdb-python][InfluxDB Python documentation]]
+  - [[https://docs.docker.com/samples/library/influxdb/][InfluxDB]] docker image documentation, [[https://github.com/influxdata/influxdb-python][InfluxDB Python
+    documentation]], and some Influx examples ([[http://csetutorials.com/influxdb-tutorial.html][CSE Tutorials]], [[https://opensourceforu.com/2016/12/introduction-influxdb-time-series-database/][Open
+    Source Forum]])
 * Notes
   Nest doesn't yet support the remote [[https://nest.com/thermostats/nest-temperature-sensor/overview/][Nest Temperature Sensors]] via
   their API, so the immediate goal of this project is unattainable.
@@ -34,6 +36,23 @@
   for now this can be simply the start of getting the temperatures and
   inserting them into a time series database for later processing.
 
+  Some simple Influx stuff:
+  - start the InfluxDB server from its Docker image:
+    #+BEGIN_EXAMPLE
+      mkdir influx
+      docker run -p 8086:8086 -d  -v ${PWD}/influx:/var/lib/influxdb influxdb
+    #+END_EXAMPLE
+  - use Python to query the InfluxDB for its list of databases:
+    #+BEGIN_EXAMPLE
+      >>> from influxdb import InfluxDBClient
+      >>> client = InfluxDBClient('localhost', 8086, 'root', 'root', 'example')
+      >>> client = InfluxDBClient('localhost', 8086) # this also works; should read about the difference
+      >>> client.get_list_database()
+      [{'name': '_internal'}]
+    #+END_EXAMPLE
+    and you can see that there is no database other than the the
+    default =_internal= database and the actual database to be used
+    needs to be created.
 
 
 
