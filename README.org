@@ -29,6 +29,7 @@
   - [[https://docs.docker.com/samples/library/influxdb/][InfluxDB]] docker image documentation, [[https://github.com/influxdata/influxdb-python][InfluxDB Python
     documentation]], and some Influx examples ([[http://csetutorials.com/influxdb-tutorial.html][CSE Tutorials]], [[https://opensourceforu.com/2016/12/introduction-influxdb-time-series-database/][Open
     Source Forum]])
+  - [[http://docs.grafana.org/features/datasources/influxdb/][Grafana documentation]] and notes on [[http://docs.grafana.org/installation/docker/][Grafana Docker Images]]
 * Notes
   Nest doesn't yet support the remote [[https://nest.com/thermostats/nest-temperature-sensor/overview/][Nest Temperature Sensors]] via
   their API, so the immediate goal of this project is unattainable.
